@@ -11,8 +11,8 @@
 
 1. **Clone the repository** (if you haven't already):
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/HitPant/Data-Analyst-Agent.git
+   cd Data-Analyst-Agent
    ```
 
 2. **Install dependencies**:
