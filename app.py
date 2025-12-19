@@ -42,7 +42,7 @@ def main():
              st.success("API Key Loaded")
              api_key = config.GEMINI_API_KEY
         else:
-            api_key = st.text_input("Gemini API Key", type="password", help="Enter your Google Gemini API key")
+            api_key = st.text_input("Model API Key", type="password", help="Enter your Model API key")
         
         st.divider()
         
@@ -218,7 +218,7 @@ def main():
         st.header("AI-Powered Insights")
         
         if st.button("Generate Insights", type="primary"):
-            with st.spinner("Analyzing data with Gemini AI..."):
+            with st.spinner("Analyzing data with AI..."):
                 trends = analysis.analyze_trends(df)
                 insights = llm_insights.generate_ai_insights(df, anomalies_summary, trends, api_key)
                 
