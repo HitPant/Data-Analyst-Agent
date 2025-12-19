@@ -29,9 +29,6 @@ def load_file(uploaded_file):
         st.success(f"Successfully loaded: {uploaded_file.name}")
     return df
 
-def load_sample_data():
-    """Load the built-in sample data"""
-    return pd.read_csv("sample_retail_data.csv")
 
 def detect_column_types(df):
     """Identify numeric, date, and categorical columns"""

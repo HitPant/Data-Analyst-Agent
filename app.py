@@ -88,9 +88,6 @@ def main():
         help="Upload your sales data in CSV or Excel format"
     )
     
-    # Use sample data button
-    use_sample = st.button("Use Sample Data")
-    
     df = None
     
     # Data Loading Logic
@@ -100,13 +97,6 @@ def main():
         except Exception as e:
             st.error(f"Error reading file: {str(e)}")
             
-    elif use_sample:
-        try:
-            df = data_processing.load_sample_data()
-            st.success("Sample data loaded successfully!")
-        except Exception as e:
-            st.error(f"Error loading sample data: {str(e)}")
-    
     # Process and display data
     if df is not None:
         st.divider()
@@ -237,10 +227,10 @@ def main():
                 
     else:
         # Welcome screen
-        st.info("Upload a dataset or use the sample data to get started!")
+        st.info("Upload a dataset to get started!")
         st.markdown("""
         ### How it works:
-        1. **Upload** your CSV or Excel file (or use sample data)
+        1. **Upload** your CSV or Excel file
         2. **Review** automatic data analysis and statistics
         3. **Detect** anomalies using statistical methods
         4. **Visualize** trends with interactive charts
