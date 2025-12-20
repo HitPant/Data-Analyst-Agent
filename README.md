@@ -1,4 +1,5 @@
 # AI Data Analyst
+![Architecture Diagram](Arch_diagram.png)
 
 ## Setup Instructions
 
